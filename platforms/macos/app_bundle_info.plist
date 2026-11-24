@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleDevelopmentRegion</key><string>zh_CN</string>
+  <key>CFBundleDisplayName</key><string>桌面游乐场</string>
+  <key>CFBundleExecutable</key><string>DeskFling</string>
+  <key>CFBundleIconFile</key><string>AppIcon</string>
+  <key>CFBundleIdentifier</key><string>org.desktopphysicsplayground.protected-probe</string>
+  <key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
+  <key>CFBundleName</key><string>DeskFling</string>
+  <key>CFBundlePackageType</key><string>APPL</string>
+  <key>CFBundleShortVersionString</key><string>1.22.0</string>
+  <key>CFBundleVersion</key><string>20261124.22</string>
+  <key>LSMinimumSystemVersion</key><string>13.0</string>
+  <key>LSUIElement</key><true/>
+  <key>NSHighResolutionCapable</key><true/>
+  <key>NSAppleEventsUsageDescription</key>
+  <string>用于你手动启动的 DeskFling（桌面游乐场）：读取桌面图标坐标并正常切换与恢复访达桌面图标显示。授权步骤本身不会退出访达或修改任何桌面文件。</string>
+</dict>
+</plist>

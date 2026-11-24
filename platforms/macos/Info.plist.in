@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>CFBundleExecutable</key><string>physics_sandbox</string>
+<key>CFBundleIdentifier</key><string>dev.dpp.sandbox</string>
+<key>CFBundleName</key><string>Desktop Physics Sandbox</string>
+<key>CFBundleDisplayName</key><string>Desktop Physics Sandbox</string>
+<key>NSAppleEventsUsageDescription</key><string>用于读取 Finder 中桌面项目的位置及必要元数据。当前功能不会移动、删除文件或改变桌面布局。macOS 授予的是 Finder 自动化权限；本应用在本阶段只执行只读操作。</string>
+<key>CFBundlePackageType</key><string>APPL</string>
+<key>CFBundleVersion</key><string>1</string>
+<key>CFBundleShortVersionString</key><string>0.1.0</string>
+<key>LSMinimumSystemVersion</key><string>13.0</string>
+<key>NSHighResolutionCapable</key><true/>
+</dict></plist>

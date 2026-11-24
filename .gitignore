@@ -1,0 +1,22 @@
+/build/
+/build-*/
+/out/
+/dist/
+/third_party/archives/
+.DS_Store
+*.swp
+.vscode/
+.idea/
+compile_commands.json
+perf-report-*.txt
+.tools/
+
+# Local internal validation archives, session logs & versioned dev scripts (kept locally, excluded from public repo)
+/AGENTS.md
+/docs/evidence/
+/docs/status*.md
+/docs/platform-capabilities*.md
+/docs/user-assisted-experiment.md
+/docs/desktop-mirror-preview.md
+/scripts/macos-protected/
+/scripts/package-macos-*

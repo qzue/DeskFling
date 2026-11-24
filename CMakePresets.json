@@ -1,0 +1,69 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": { "major": 3, "minor": 25, "patch": 0 },
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "generator": "Ninja Multi-Config",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_CONFIGURATION_TYPES": "Debug;Release;RelWithDebInfo"
+      }
+    },
+    {
+      "name": "macos",
+      "inherits": "base",
+      "displayName": "macOS (Apple Clang, host arch)",
+      "condition": { "type": "equals", "lhs": "${hostSystemName}", "rhs": "Darwin" }
+    },
+    {
+      "name": "macos-x86_64",
+      "inherits": "base",
+      "displayName": "macOS x86_64 cross-build (build-only, unverified)",
+      "condition": { "type": "equals", "lhs": "${hostSystemName}", "rhs": "Darwin" },
+      "cacheVariables": { "CMAKE_OSX_ARCHITECTURES": "x86_64" }
+    },
+    {
+      "name": "macos-asan",
+      "inherits": "base",
+      "displayName": "macOS Debug + ASan/UBSan",
+      "condition": { "type": "equals", "lhs": "${hostSystemName}", "rhs": "Darwin" },
+      "cacheVariables": { "DPP_SANITIZE": "ON" }
+    },
+    {
+      "name": "windows-msvc",
+      "displayName": "Windows x64 (MSVC, Visual Studio 2022)",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "condition": { "type": "equals", "lhs": "${hostSystemName}", "rhs": "Windows" }
+    },
+    {
+      "name": "linux-core",
+      "inherits": "base",
+      "displayName": "Linux shared-core tests only (NOT a desktop acceptance target)",
+      "condition": { "type": "equals", "lhs": "${hostSystemName}", "rhs": "Linux" },
+      "cacheVariables": { "DPP_BUILD_APPS": "OFF" }
+    }
+  ],
+  "buildPresets": [
+    { "name": "macos-debug", "configurePreset": "macos", "configuration": "Debug" },
+    { "name": "macos-release", "configurePreset": "macos", "configuration": "Release" },
+    { "name": "macos-relwithdebinfo", "configurePreset": "macos", "configuration": "RelWithDebInfo" },
+    { "name": "macos-x86_64-release", "configurePreset": "macos-x86_64", "configuration": "Release" },
+    { "name": "macos-asan-debug", "configurePreset": "macos-asan", "configuration": "Debug" },
+    { "name": "windows-debug", "configurePreset": "windows-msvc", "configuration": "Debug" },
+    { "name": "windows-release", "configurePreset": "windows-msvc", "configuration": "Release" },
+    { "name": "windows-relwithdebinfo", "configurePreset": "windows-msvc", "configuration": "RelWithDebInfo" },
+    { "name": "linux-core-debug", "configurePreset": "linux-core", "configuration": "Debug" }
+  ],
+  "testPresets": [
+    { "name": "macos-debug", "configurePreset": "macos", "configuration": "Debug", "output": { "outputOnFailure": true } },
+    { "name": "macos-release", "configurePreset": "macos", "configuration": "Release", "output": { "outputOnFailure": true } },
+    { "name": "macos-asan-debug", "configurePreset": "macos-asan", "configuration": "Debug", "output": { "outputOnFailure": true } },
+    { "name": "windows-debug", "configurePreset": "windows-msvc", "configuration": "Debug", "output": { "outputOnFailure": true } },
+    { "name": "windows-release", "configurePreset": "windows-msvc", "configuration": "Release", "output": { "outputOnFailure": true } },
+    { "name": "linux-core-debug", "configurePreset": "linux-core", "configuration": "Debug", "output": { "outputOnFailure": true } }
+  ]
+}

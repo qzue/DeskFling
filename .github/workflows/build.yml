@@ -1,0 +1,43 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build-and-test:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-24.04
+            cmake_args: "-DDPP_BUILD_APPS=OFF -DDPP_WARNINGS_AS_ERRORS=ON"
+          - os: macos-15
+            cmake_args: "-DDPP_WARNINGS_AS_ERRORS=ON"
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure
+        run: cmake -S . -B build/ci -DCMAKE_BUILD_TYPE=Release ${{ matrix.cmake_args }}
+      - name: Build
+        run: cmake --build build/ci --config Release --parallel 3
+      - name: Unit tests
+        run: ctest --test-dir build/ci -C Release --output-on-failure
+
+  windows-msvc:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure & Test (Debug + Release)
+        shell: pwsh
+        run: ./scripts/build-windows.ps1
+
+  sanitizers:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: cmake -S . -B build/asan -DCMAKE_BUILD_TYPE=Debug -DDPP_BUILD_APPS=OFF -DDPP_SANITIZE=ON
+      - run: cmake --build build/asan --parallel 3
+      - run: ctest --test-dir build/asan --output-on-failure
