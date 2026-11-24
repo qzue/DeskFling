@@ -17,27 +17,35 @@
 ---
 
 <p align="center">
-  <img src="docs/assets/showcase-blackhole.jpg" width="100%" alt="DeskFling 3D Schwarzschild Ray-Traced Black Hole" />
+  <img src="docs/assets/gifs/promo-overview.gif" width="100%" alt="DeskFling All-in-One Overview" />
+  <br />
+  <sub><strong>🎬 8-Second Live Overview</strong> · Gravity Drop → 3D Ray-Traced Black Hole → Icon Billiards → Slingshot Siege → Instant <code>Esc</code> Restore</sub>
 </p>
 
 <table>
   <tr>
+    <td colspan="2">
+      <img src="docs/assets/gifs/showcase-blackhole.gif" width="100%" alt="DeskFling 3D Schwarzschild Ray-Traced Black Hole" />
+      <p align="center"><sub><strong>🕳 3D Schwarzschild GPU Black Hole</strong> · Real-Time Metal & D3D11 Geodesic Lensing · Tidal Particle Streams · Free <code>Option</code>/<code>Alt</code> 3D Orbit</sub></p>
+    </td>
+  </tr>
+  <tr>
     <td width="50%">
-      <img src="docs/assets/showcase-billiards.jpg" width="100%" alt="Desktop Icon Billiards" />
+      <img src="docs/assets/gifs/showcase-billiards.gif" width="100%" alt="Desktop Icon Billiards" />
       <p align="center"><sub><strong>🎱 Desktop Icon Billiards</strong> · 8-Ball & 12-ft Snooker · 3D English Spin · AI & Cross-Platform LAN</sub></p>
     </td>
     <td width="50%">
-      <img src="docs/assets/showcase-slingshot.jpg" width="100%" alt="Slingshot Siege" />
+      <img src="docs/assets/gifs/showcase-slingshot.gif" width="100%" alt="Slingshot Siege" />
       <p align="center"><sub><strong>🏹 Slingshot Siege & Level Workshop</strong> · Multi-material Physics Fortresses · Custom Level Builder</sub></p>
     </td>
   </tr>
   <tr>
     <td width="50%">
-      <img src="docs/assets/showcase-gravity.jpg" width="100%" alt="Gravity Playground" />
-      <p align="center"><sub><strong>🪐 Scientific Gravity Playground</strong> · Celestial Presets · Grab & Fling · Optional Layout Writeback</sub></p>
+      <img src="docs/assets/gifs/showcase-gravity.gif" width="100%" alt="Gravity Playground" />
+      <p align="center"><sub><strong>🪐 Scientific Gravity Playground</strong> · Celestial Presets · Grab & Fling · Instant <code>Esc</code> Restore</sub></p>
     </td>
     <td width="50%">
-      <img src="docs/assets/showcase-airhockey.jpg" width="100%" alt="120Hz Air Hockey" />
+      <img src="docs/assets/gifs/showcase-airhockey.gif" width="100%" alt="120Hz Air Hockey" />
       <p align="center"><sub><strong>🏒 120Hz Neon Air Hockey</strong> · 1:1 Zero-Lag Cursor Tracking · 3 AI Tiers & UDP LAN Matchmaking</sub></p>
     </td>
   </tr>

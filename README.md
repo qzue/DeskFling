@@ -17,27 +17,35 @@
 ---
 
 <p align="center">
-  <img src="docs/assets/showcase-blackhole.jpg" width="100%" alt="DeskFling 3D Schwarzschild Ray-Traced Black Hole" />
+  <img src="docs/assets/gifs/promo-overview.gif" width="100%" alt="DeskFling All-in-One Overview" />
+  <br />
+  <sub><strong>🎬 8 秒实机速览</strong> · 重力掉落 → 3D 光追黑洞 → 桌面图标台球 → 弹弓攻城 → 按 <code>Esc</code> 秒级无损还原</sub>
 </p>
 
 <table>
   <tr>
+    <td colspan="2">
+      <img src="docs/assets/gifs/showcase-blackhole.gif" width="100%" alt="DeskFling 3D Schwarzschild Ray-Traced Black Hole" />
+      <p align="center"><sub><strong>🕳 3D 史瓦西光追黑洞</strong> · Metal / D3D11 实时引力透镜光子环 · 潮汐撕裂粒子流 · <code>Option</code>/<code>Alt</code> 360° 自由旋转视角</sub></p>
+    </td>
+  </tr>
+  <tr>
     <td width="50%">
-      <img src="docs/assets/showcase-billiards.jpg" width="100%" alt="Desktop Icon Billiards" />
+      <img src="docs/assets/gifs/showcase-billiards.gif" width="100%" alt="Desktop Icon Billiards" />
       <p align="center"><sub><strong>🎱 桌面图标台球</strong> · 国际八球 / 斯诺克 · 3D 加塞 · AI 与局域网对战</sub></p>
     </td>
     <td width="50%">
-      <img src="docs/assets/showcase-slingshot.jpg" width="100%" alt="Slingshot Siege" />
+      <img src="docs/assets/gifs/showcase-slingshot.gif" width="100%" alt="Slingshot Siege" />
       <p align="center"><sub><strong>🏹 弹弓攻城 & 关卡工坊</strong> · 多材质物理堡垒 · 自定义搭建阵型</sub></p>
     </td>
   </tr>
   <tr>
     <td width="50%">
-      <img src="docs/assets/showcase-gravity.jpg" width="100%" alt="Gravity Playground" />
-      <p align="center"><sub><strong>🪐 科学重力游乐场</strong> · 星球引力预设 · 自由抓甩碰撞 · 可选位置写回</sub></p>
+      <img src="docs/assets/gifs/showcase-gravity.gif" width="100%" alt="Gravity Playground" />
+      <p align="center"><sub><strong>🪐 科学重力游乐场</strong> · 星球引力预设 · 自由抓甩碰撞 · <code>Esc</code> 无损还原</sub></p>
     </td>
     <td width="50%">
-      <img src="docs/assets/showcase-airhockey.jpg" width="100%" alt="120Hz Air Hockey" />
+      <img src="docs/assets/gifs/showcase-airhockey.gif" width="100%" alt="120Hz Air Hockey" />
       <p align="center"><sub><strong>🏒 120Hz 空气曲棍球</strong> · 1:1 零延迟跟手 · 三档 AI 与双人/局域网联机</sub></p>
     </td>
   </tr>
