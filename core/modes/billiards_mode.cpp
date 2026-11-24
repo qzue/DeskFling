@@ -5258,7 +5258,7 @@ void BilliardsMode::buildDrawList(DrawList& out) const {
         }
     }
 
-    char buf[192];
+    char buf[512];
     if (config_.style == BilliardsStyle::Classic) {
         std::snprintf(buf, sizeof(buf), "Pocketed %d/%zu  Shots %d%s", pocketedCount_, balls_.size(), shots_,
                       state_ == BilliardsState::Finished ? "  - cleared!" : "");
@@ -5270,7 +5270,7 @@ void BilliardsMode::buildDrawList(DrawList& out) const {
         const bool aiTurnNow = isAiTurn();
         const char* p0Name = playerLabel(0);
         const char* p1Name = playerLabel(1);
-        char turnTagBuf[96] = "";
+        char turnTagBuf[160] = "";
         const char* turnTag = "";
         if (config_.matchMode == BilliardsMatchMode::Hotseat) {
             turnTag = currentPlayer_ == 0 ? "P1回合 · " : "P2回合 · ";

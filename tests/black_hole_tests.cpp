@@ -185,7 +185,9 @@ TEST(BlackHole, CinematicLayersSwallowingCopiesBetweenDiskHalves) {
         EXPECT_EQ(i > holes[0] && i < holes[1], swallowing);
         EXPECT_EQ(s->interactive, !swallowing);
         EXPECT_TRUE(s->center.isFinite() && s->size.isFinite());
-        if (swallowing) EXPECT_GT(s->consume, 0.0f);
+        if (swallowing) {
+            EXPECT_GT(s->consume, 0.0f);
+        }
     }
     EXPECT_EQ(mirrorHit(p.drawList(), {400, 300}), kNoTexture);
     advance(p);  // 0.83 s: cinematic dissolve (1.5 s) is still running

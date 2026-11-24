@@ -276,12 +276,12 @@ std::vector<Vec2> migrateIconCenters(std::span<const MigrationIcon> icons, Vec2 
         const auto h = rotatedIconHalfExtent(icon.size, icon.rotation);
         if (2 * h.x > newSize.x || 2 * h.y > newSize.y || 2 * h.x > oldSize.x || 2 * h.y > oldSize.y)
             throw std::invalid_argument("rotated icon cannot fit");
-        const auto map = [](float p, float h, float before, float after) {
-            const float range = before - 2 * h;
-            const float t = range > 0 ? std::clamp((p - h) / range, 0.0f, 1.0f) : .5f;
-            // Roundoff in h + (after - 2*h) can exceed after-h even for t=1.
+        const auto map = [](float p, float halfExt, float before, float after) {
+            const float range = before - 2 * halfExt;
+            const float t = range > 0 ? std::clamp((p - halfExt) / range, 0.0f, 1.0f) : .5f;
+            // Roundoff in halfExt + (after - 2*halfExt) can exceed after-halfExt even for t=1.
             // Project onto the SAME legal interval; do not relax the boundary test.
-            return std::clamp(h + t * (after - 2 * h), h, after - h);
+            return std::clamp(halfExt + t * (after - 2 * halfExt), halfExt, after - halfExt);
         };
         positions.push_back(oldSize == newSize ? icon.center
                                                : Vec2{map(icon.center.x, h.x, oldSize.x, newSize.x),

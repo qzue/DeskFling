@@ -41,7 +41,9 @@ TEST(DisplayMigration, RunningAndUserPausePreserveMotionIdentityAndSettings) {
             candidate->commitMigration();
             auto before = candidate->mode().world().state(0);
             candidate->tick(.02);
-            if (paused) EXPECT_EQ(candidate->mode().world().state(0).position, before.position);
+            if (paused) {
+                EXPECT_EQ(candidate->mode().world().state(0).position, before.position);
+            }
             auto again = candidate->freezeForMigration();
             EXPECT_EQ(again.setup.icons[0].id, IconId{17});
             EXPECT_EQ(again.setup.icons[0].texture, TextureId{3});
@@ -245,7 +247,9 @@ TEST(DisplayMigration, RecordedPileKeepsPausedMotionBindingsAndResetAcrossCandid
         next->commitMigration();
         auto before = next->mode().world().state(0);
         next->tick(.02);
-        if (paused) EXPECT_EQ(before.position, next->mode().world().state(0).position);
+        if (paused) {
+            EXPECT_EQ(before.position, next->mode().world().state(0).position);
+        }
         next->reset();
         next->tick(0);
         auto reset = next->freezeForMigration();

@@ -55,14 +55,14 @@ struct UserPreferences {
     std::string lastLanEndpoint = "127.0.0.1:39457";
 
     void sanitize(bool forColdBoot = false) {
-        if (static_cast<int>(lastPlayMode) < 0 || static_cast<int>(lastPlayMode) > 4) {
+        if (static_cast<unsigned>(lastPlayMode) > 4u) {
             lastPlayMode = PlayMode::Gravity;
         }
         displayMode = std::clamp(displayMode, -1, 15);
         gravityMagnitude = std::isfinite(gravityMagnitude)
                                ? std::clamp(gravityMagnitude, kMinGravityMps2, kMaxGravityMps2)
                                : kEarthGravityMps2;
-        if (static_cast<int>(gravityDirection) < 0 || static_cast<int>(gravityDirection) > 3) {
+        if (static_cast<unsigned>(gravityDirection) > 3u) {
             gravityDirection = GravityDirection::Down;
         }
         gravityRestitution =
@@ -80,22 +80,22 @@ struct UserPreferences {
                             ? std::clamp(blackHoleTilt, BlackHoleState::kMinTilt, BlackHoleState::kMaxTilt)
                             : 0.0f;
 
-        if (static_cast<int>(billiardsRule) < 0 || static_cast<int>(billiardsRule) > 2) {
+        if (static_cast<unsigned>(billiardsRule) > 2u) {
             billiardsRule = BilliardsRule::Free;
         }
-        if (static_cast<int>(billiardsMatchMode) < 0 || static_cast<int>(billiardsMatchMode) > 3) {
+        if (static_cast<unsigned>(billiardsMatchMode) > 3u) {
             billiardsMatchMode = BilliardsMatchMode::Solo;
         }
-        if (static_cast<int>(billiardsAiDifficulty) < 0 || static_cast<int>(billiardsAiDifficulty) > 3) {
+        if (static_cast<unsigned>(billiardsAiDifficulty) > 3u) {
             billiardsAiDifficulty = BilliardsAiDifficulty::Medium;
         }
-        if (static_cast<int>(iconSelection) < 0 || static_cast<int>(iconSelection) > 2) {
+        if (static_cast<unsigned>(iconSelection) > 2u) {
             iconSelection = IconSelectionPolicy::FirstN;
         }
-        if (static_cast<int>(extraIcons) < 0 || static_cast<int>(extraIcons) > 1) {
+        if (static_cast<unsigned>(extraIcons) > 1u) {
             extraIcons = ExtraIconsPolicy::Hide;
         }
-        if (static_cast<int>(tableTheme) < 0 || static_cast<int>(tableTheme) > 2) {
+        if (static_cast<unsigned>(tableTheme) > 2u) {
             tableTheme = BilliardsTableTheme::Full;
         }
         if (tableTheme == BilliardsTableTheme::Full && !showTableChrome) {
@@ -103,7 +103,7 @@ struct UserPreferences {
         }
         showTableChrome = (tableTheme == BilliardsTableTheme::Full);
 
-        if (static_cast<int>(slingshotPreset) < 0 || static_cast<int>(slingshotPreset) > 5) {
+        if (static_cast<unsigned>(slingshotPreset) > 5u) {
             slingshotPreset = SlingshotPreset::TwinTowers;
         }
         slingshotAmmoCount = std::clamp(slingshotAmmoCount, 3, 6);
@@ -111,10 +111,10 @@ struct UserPreferences {
         slingshotProgress.highScore = slingshotHighScore;
         if (slingshotCustomPieces.size() > 48u) slingshotCustomPieces.resize(48u);
 
-        if (static_cast<int>(hockeyMatchMode) < 0 || static_cast<int>(hockeyMatchMode) > 2) {
+        if (static_cast<unsigned>(hockeyMatchMode) > 2u) {
             hockeyMatchMode = AirHockeyMatchMode::SoloAI;
         }
-        if (static_cast<int>(hockeyDifficulty) < 0 || static_cast<int>(hockeyDifficulty) > 2) {
+        if (static_cast<unsigned>(hockeyDifficulty) > 2u) {
             hockeyDifficulty = AirHockeyDifficulty::Standard;
         }
         if (hockeyTargetGoals != 5 && hockeyTargetGoals != 7 && hockeyTargetGoals != 11) {

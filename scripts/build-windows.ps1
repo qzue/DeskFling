@@ -38,7 +38,7 @@ function Protect-ArtifactPaths {
 }
 try {
     # Explicit input allowlist: includes uncommitted files, never Git metadata or desktop evidence.
-    $inputs = @('CMakeLists.txt', 'CMakePresets.json', 'README.md', 'THIRD_PARTY_NOTICES.md',
+    $inputs = @('CMakeLists.txt', 'CMakePresets.json', 'LICENSE', 'README.md', 'THIRD_PARTY_NOTICES.md',
         'core', 'apps', 'platforms/windows', 'platforms/mirror_hit.h', 'platforms/display_migration.h', 'platforms/filename_geometry.h', 'tests', 'benchmarks', 'third_party/box2d',
         'third_party/notices', 'scripts/build-windows.ps1', 'docs/windows-build.md')
     if (Test-Path (Join-Path $root 'third_party/archives/googletest-1.15.2.tar.gz')) {

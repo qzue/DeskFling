@@ -570,7 +570,7 @@ void Playground::setGravitySettings(float magnitudeMps2, GravityDirection direct
     if (std::isfinite(magnitudeMps2)) {
         gravityMagnitude_ = std::clamp(magnitudeMps2, kMinGravityMps2, kMaxGravityMps2);
     }
-    if (static_cast<int>(direction) >= 0 && static_cast<int>(direction) <= 3) {
+    if (static_cast<unsigned>(direction) <= 3u) {
         gravityDirection_ = direction;
     }
     if (std::isfinite(restitution)) {

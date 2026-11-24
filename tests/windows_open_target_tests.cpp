@@ -143,7 +143,7 @@ TEST_F(WindowsOpenFiles, SimpleLinkRetainsSourceAndDestinationIdentity) {
     link(source, destination);
     auto target = bindOpenPath(source.wstring(), true);
     ASSERT_TRUE(target);
-    EXPECT_EQ(target->path, destination.wstring());
+    EXPECT_TRUE(std::filesystem::equivalent(target->path, destination));
     EXPECT_TRUE(validOpenTarget(*target));
     // Source mutation is rejected even if the original destination still exists.
     link(source, dir);
