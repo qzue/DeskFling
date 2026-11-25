@@ -11,6 +11,7 @@
     <img src="https://img.shields.io/badge/Physics-Box2D%20v3.1.1-34C759?style=flat-square" alt="Box2D" />
     <img src="https://img.shields.io/badge/GPU-Metal%20%26%20Direct3D%2011-FF9F0A?style=flat-square" alt="GPU" />
     <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-purple?style=flat-square" alt="MIT License" /></a>
+    <a href="https://linux.do/"><img src="https://img.shields.io/badge/Community-LINUX%20DO-FFB003?style=flat-square&logo=linux&logoColor=white" alt="LINUX DO Community" /></a>
   </p>
 </div>
 
@@ -108,7 +109,15 @@ ctest --preset windows-release --output-on-failure
 
 ---
 
-## 📄 License & Credits
+## 📄 License & Third-Party Credits
 
 - Licensed under the [**MIT License**](LICENSE).
 - Powered by [**Box2D v3.1.1**](https://github.com/erincatto/box2d) (MIT) by Erin Catto and tested with [**GoogleTest**](https://github.com/google/googletest) (BSD-3-Clause). See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+---
+
+## 🤝 Community & Acknowledgments
+
+<!-- Replace the discussion link below with your specific topic URL after posting, e.g. https://linux.do/t/topic/xxxxxx -->
+- **Community Partner**: [**LINUX DO**](https://linux.do/) — Open-source & developer community.
+- **Discussion & Feedback**: Join the [**LINUX DO Launch Thread**](https://linux.do/) to share feedback, report issues, or exchange custom Slingshot stages.

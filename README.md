@@ -11,6 +11,7 @@
     <img src="https://img.shields.io/badge/Physics-Box2D%20v3.1.1-34C759?style=flat-square" alt="Box2D" />
     <img src="https://img.shields.io/badge/GPU-Metal%20%26%20Direct3D%2011-FF9F0A?style=flat-square" alt="GPU" />
     <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-purple?style=flat-square" alt="MIT License" /></a>
+    <a href="https://linux.do/"><img src="https://img.shields.io/badge/Community-LINUX%20DO-FFB003?style=flat-square&logo=linux&logoColor=white" alt="LINUX DO Community" /></a>
   </p>
 </div>
 
@@ -120,7 +121,13 @@ ctest --preset windows-release --output-on-failure
 
 ---
 
-## 📄 开源协议与致谢
+## 📄 开源协议
 
 - 本项目基于 [**MIT License**](LICENSE) 开源。
 - 物理引擎采用 Erin Catto 开发的 [**Box2D v3.1.1**](https://github.com/erincatto/box2d)（MIT），单元测试基于 [**GoogleTest**](https://github.com/google/googletest)（BSD-3-Clause），详见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+
+---
+
+## 🤝 社区与致谢（Community）
+
+- **友情链接**：[**LINUX DO**](https://linux.do/) —— 新的理想型技术与开源社区。
